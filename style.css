@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Remove Brower styles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+header{
+    background-color: black;
+}
+.header-content{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("bac.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.navbar{
+    background-color: var(--secondary);
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    height: 12vh;
+}
+.logo1{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: initial;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.8s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+
+.fa-bars{
+    color: white;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 25px;
+    margin-bottom: 3%;
+}
+button{
+    background-color: #9ab4e0;
+    color: black;
+    font-size: 20px;
+    border-radius: 50px;
+
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    transition: .5s;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+@media only screen and(max-width:600px){
+    .header-content{
+        width: 100%;
+        height: 100vh;
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("bac.jpg");
+        
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+   .logo1{
+        height: 30px;
+        position: center;
+    }
+    .navbar{
+       /* display: none; */
+       position: absolute;
+       flex-direction: column;
+       background-color: var(--secondary-light);
+       right: -10;
+       top: 12vh;
+       height: 50vh;
+       padding: 1.5rem 0;
+       width: 100vh;
+       transition: all 400ms;
+
+    }
+    .content h1{
+        font-size: 40%;
+        margin-top: 80px;
+        text-align: center;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .burger{
+        display: block; 
+        cursor: pointer;
+    }
+    
+}    
+.nav-show{
+    width: 100%;
+
+}
+    
